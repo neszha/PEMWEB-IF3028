@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="product-info">
+    <div class="container-md">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Informasi Produk</h4>
+            </div>
+            <div class="card-body">
+                <form action="detail.html" method="GET">
+
+                    <div class="form-container">
+                        <label for="form-product">Nama Produk:</label>
+                        <select name="id" id="form-product">
+                            <option value="23434">Nike N012 Running Shoes</option>
+                            <option value="12312">Photive wireless speakers</option>
+                            <option value="23454">Topman shoe</option>
+                            <option value="34544">Apple AirPods 2</option>
+                        </select>
+                    </div>
+
+                    <div class="form-container">
+                        <label for="form-country">Negara Produksi:</label>
+                        <select name="country" id="form-country">
+                            <option value="AU">Australia</option>
+                            <option value="BD">Bangladesh</option>
+                            <option value="ID">Indonesia</option>
+                            <option value="KR">Korea Selatan</option>
+                            <option value="US">United States</option>
+                        </select>
+                    </div>
+
+                    <div class="form-container">
+                        <label for="form-weight">Ukuran Produk:</label>
+                        <select name="weight" id="form-weight">
+                            <option value="lg">Besar</option>
+                            <option value="md">Sedang</option>
+                            <option value="sm">Kecil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-container text-end">
+                        <button type="submit" class="btn btn-blue">Lihat Produk</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
