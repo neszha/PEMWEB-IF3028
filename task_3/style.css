@@ -13,16 +13,6 @@ h1 {
     margin-top: 0;
 }
 
-.header1 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-}
-
 ul {
     padding-left: 22px;
 }
