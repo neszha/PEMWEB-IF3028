@@ -1,0 +1,38 @@
+[
+    {
+        "id": "shoes-01",
+        "name": "Nike N012 Shoes",
+        "color": "gray",
+        "price": 260
+    },
+    {
+        "id": "shoes-02",
+        "name": "Adidas Running Shoes",
+        "color": "black",
+        "price": 240
+    },
+    {
+        "id": "shoes-03",
+        "name": "Puma P103 Shoes",
+        "color": "purple",
+        "price": 250
+    },
+    {
+        "id": "shoes-04",
+        "name": "Sports S120 Shoes",
+        "color": "cyan",
+        "price": 230
+    },
+    {
+        "id": "shoes-05",
+        "name": "Adidas AB23 Shoes",
+        "color": "blue",
+        "price": 250
+    },
+    {
+        "id": "shoes-06",
+        "name": "Nike N012 Shoes",
+        "color": "gray",
+        "price": 260
+    }
+]

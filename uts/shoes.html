@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk Sepatu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        const searchProduct = () => {
+            const keyword = document.getElementById('search').value;
+            const dataLen = document.querySelectorAll('table tbody tr').length
+            for (let i = 0; i < dataLen; i+=1) {
+                const tr = document.querySelector(`table tbody tr:nth-child(${i + 1})`)
+                if(tr.innerText.toLocaleLowerCase().includes(keyword)) {
+                    tr.style.display = "table-row";
+                }else {
+                    tr.style.display = "none";
+                }    
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcumb">
+            <div class="link">
+                <a href="shoes.html">Produk</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-head d-flex">
+                <h3 class="card-title">Daftar Produk Sepatu</h3>
+            </div>
+            <div class="card-body">
+                <label for="search">Cari : </label>
+                <input id="search" type="text" placeholder="Keyword pencarian" onchange="searchProduct()">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Warna</th>
+                            <th>Harga</th>
+                            <th class="text-center">#</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#shoes-01</td>
+                            <td>Nike N012 Shoes</td>
+                            <td>gray</td>
+                            <td>$260</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-01">Detail</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#shoes-02</td>
+                            <td>Adidas Running Shoes</td>
+                            <td>black</td>
+                            <td>$240</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-02">Detail</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#shoes-03</td>
+                            <td>Puma P103 Shoes</td>
+                            <td>purple</td>
+                            <td>$250</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-03">Detail</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#shoes-04</td>
+                            <td>Sports S120 Shoes</td>
+                            <td>cyan</td>
+                            <td>$230</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-04">Detail</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#shoes-05</td>
+                            <td>Adidas AB23 Shoes</td>
+                            <td>blue</td>
+                            <td>$250</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-05">Detail</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#shoes-06</td>
+                            <td>Nike N012 Shoes</td>
+                            <td>gray</td>
+                            <td>$260</td>
+                            <td class="text-center">
+                                <a class="btn btn-blue" href="shoes-detail.html?id=shoes-06">Detail</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-header flex-end">
+                <div class="paggination">
+                    <a class="page-item active" href="shoes.html?page=1">1</a>
+                    <a class="page-item" href="shoes.html?page=2">2</a>
+                    <a class="page-item" href="shoes.html?page=3">3</a>
+                    <a class="page-item" href="shoes.html?page=4">4</a>
+                    <a class="page-item" href="shoes.html?page=5">5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

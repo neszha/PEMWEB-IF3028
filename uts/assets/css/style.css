@@ -1,0 +1,120 @@
+body {
+    background-color: #faf9f9;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin-top: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.breadcumb {
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.breadcumb span {
+    margin-left: 8px;
+    margin-right: 8px;
+    color: gainsboro;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.card {
+    background-color: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    border: 0.0625rem solid rgba(231,234,243,.7);
+}
+
+.card-title {
+    margin-top: 0;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.table {
+    width: 100%;
+}
+
+.table tr {
+    border-bottom: 1px solid gray;
+    
+}
+
+.table tr th {
+    text-align: inherit ;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 12px 12px 12px 12px;
+}
+
+.table tr td {
+    padding: 14px 12px 14px 12px;
+}
+
+.btn {
+    margin: 0;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 0.25rem;
+    min-width: 110px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn.btn-blue {
+    border: 1px solid #5874ff;
+    background-color: #3d58de;
+}
+
+.btn.btn-light {
+    border: 1px solid #ebebeb;
+    background-color: #f5f6f8;
+    color: #000;
+}
+
+.paggination {
+    display: flex;
+    margin-top: 12px;
+}
+
+.paggination .page-item {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    margin: 8px;
+    background-color: #ebebeb;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 14px;
+}
+
+.paggination .page-item.active {
+    color: black;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text-gray {
+    color: gray;
+}
+
+img {
+    display: block;
+    width: 250px;
+    margin: auto;
+}
