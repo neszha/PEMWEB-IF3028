@@ -1,0 +1,28 @@
+body {
+    margin: 24px;
+}
+
+section {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+ul {
+    padding-left: 22px;
+}

@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tugas 3 - Pemrograman WEB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <section>
+        <div class="section-wrapper">
+            <div>
+                <h1>Nama: <span id="name-place">....</span></h1>
+            </div>
+            <div>
+                <input id="input-name" type="text" placeholder="Masukan nama">
+                <button onclick="setName()">Tampilkan</button>
+            </div>
+        </div>
+    </section>
+
+    <section >
+        <div class="section-wrapper">
+            <div>
+                <h1>Daftar Aktifitas:</h1>
+                <ul id="activities">
+                    <!-- <li>Activity</li> -->
+                </ul>
+            </div>
+            <div>
+                <input id="input-activity" type="text" placeholder="Nama kegiatan">
+                <button onclick="addActivity()">Tambahkan</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function setName() {
+            const inputElement = document.querySelector('#input-name');
+
+            // Ambil data input.
+            const name = inputElement.value;
+            
+            // Validasi data.
+            if(!name) return alert('Data input tidak boleh kosong!');
+
+            // Set ke dalam html.
+            document.querySelector('#name-place').innerText = name;
+
+            // Bersihakn input form.
+            inputElement.value = '';
+        }
+
+        function addActivity() {
+            const inputElement = document.querySelector('#input-activity');
+
+            // Ambil data input.
+            const activityName = inputElement.value;
+
+            // Validasi data.
+            if(!activityName) return alert('Data input tidak boleh kosong!');
+
+            // Tambahkan data.
+            const el = document.createElement('li');
+            el.innerText = activityName;;
+            document.querySelector('#activities').appendChild(el);
+
+            // Bersihkan input.
+            inputElement.value = '';
+        }
+    </script>
+
 </body>
 </html>
