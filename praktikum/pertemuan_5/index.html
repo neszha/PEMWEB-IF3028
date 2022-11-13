@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa - Pertemuan 5</title>
+</head>
+<body>
+
+    <!-- form filter -->
+    <div>
+        <span>Prodi</span>
+        <select id="prodi">
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="all">Tampilkan Semua</option>
+            <!-- Data dari javascript -->
+        </select>
+    </div>
+    <br>
+    <!-- end: form filter -->
+
+    <!-- daftar mahasiswa -->
+    <table border="1">
+        <thead>
+            <tr>
+                <td>No.</td>
+                <td>NIM</td>
+                <td>Nama</td>
+                <td>Program Studi</td>
+            </tr>
+        </thead>
+        <tbody id="mahasiswa">
+            <!-- Data dari javascript -->
+        </tbody>
+    </table>
+    <!-- end: daftar mahasiswa -->
+
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        const prodiDics = {
+            IF: 'Teknik Informatika',
+            PWK: 'Perencanaan Wilayah dan Kota',
+            EL: 'Teknik Elektro',
+            ME: 'Teknik Mesin',
+        };
+        
+        // Mengembil daftar prodi.
+        const getProdiList = () => {
+            $.getJSON('api/mahasiswa.php?prodi-list=true', (data) => {
+                data.data.forEach(item => {
+                    const prodi = {
+                        key: item, name: prodiDics[item]
+                    };
+                    $('#prodi').append(`<option value="${prodi.key}">${prodi.name}</option>`);
+                });
+            });
+        };
+
+        const getMahasiswa = (prodi) => {
+            $('#mahasiswa').empty();
+            $.getJSON(`api/mahasiswa.php?prodi=${prodi}`, (data) => {
+                data.data.forEach((item, index) => {
+                    const prodi = prodiDics[item.prodi] || 'Tidak diketahui!';
+                    $('#mahasiswa').append(`<tr><td>${index+1}</td><td>${item.nim}</td><td>${item.name}</td><td>${prodi}</td></tr>`);
+                });
+            });
+        };
+
+        $(document).ready(() => {
+            getProdiList();
+            
+            // Mendeteksi imputan select berubah.
+            $('#prodi').change(() => {
+                const prodiKey = $('#prodi').val();
+                getMahasiswa(prodiKey);
+            });
+        });
+    </script>
+    
+</body>
+</html>
